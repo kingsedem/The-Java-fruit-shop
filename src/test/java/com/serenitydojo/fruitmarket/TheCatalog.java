@@ -2,6 +2,7 @@ package com.serenitydojo.fruitmarket;
 import static org.assertj.core.api.Assertions.assertThat;
 import com.serenitydojo.Catalog;
 import com.serenitydojo.FruitUnAvailableException;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import javax.swing.plaf.PanelUI;
@@ -9,11 +10,24 @@ import javax.swing.plaf.PanelUI;
 
 public class TheCatalog {
 
+    @DisplayName("The catalog should return the current price of a fruit")
         @Test
         public void shouldBeAbleToUpdateTheCurrentPriceOfAFruit() {
             Catalog catalog = new Catalog();
             catalog.setPrice("Apples", 4.00);
+            catalog.setPrice("Oranges", 5.50);
+            catalog.setPrice("Bananas", 6.00);
+            catalog.setPrice("Pears", 4.50);
+
             double priceOfApples = catalog.getPriceOf("Apples");
+            double priceOfOranges = catalog.getPriceOf("Oranges");
+            double priceOfBananas = catalog.getPriceOf("Bananas");
+            double priceOfPears = catalog.getPriceOf("Apples");
+
+
+            assertThat(priceOfApples).isEqualTo(4.00);
+            assertThat(priceOfApples).isEqualTo(4.00);
+            assertThat(priceOfApples).isEqualTo(4.00);
             assertThat(priceOfApples).isEqualTo(4.00);
 
         }

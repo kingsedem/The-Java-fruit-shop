@@ -1,13 +1,15 @@
-## Fruit Shop Cart Calulatior Challenge
+## Fruit Shop Cart Calculator Kata
 
-In this kata, your challenge is to write a Fruit Shop Cart Calculator. Write tests code to illustrate the following requirements, 
-and write the additional application code you need to make them work:
+In this kata, the challenge is to write a Fruit Shop Cart Calculator. 
+Write tests code to illustrate the following requirements, 
+and write the additional application code I need to make them work:
 
-- The shop sells apples, oranges, bananas, pears, peaches and other fruit, depending on availability. For example the prices per kilo for the currently available fruit are:
-    - Apples: $4.00
+- The shop sells apples, oranges, bananas, pears, peaches and other fruit, depending on availability. 
+For example the prices per kilo for the currently available fruits are:
+    - Apples:  $4.00
     - Oranges: $5.50
     - Bananas: $6.00
-    - Pears: $4.50
+    - Pears:   $4.50
 - You can update the catalog with the current market price of a fruit
 - The Catalog should list the names of the currently available fruit in alphabetical order
 - The Catalog should report the price of a given type of fruit  --- Same as NO.1

@@ -23,7 +23,14 @@ public class Cart {
 
     public double getRunningTotal() {
           return items.stream()
-                  .mapToDouble(item-> catalog.getPriceOf(item.product()) * item.quantity())
+                  .mapToDouble(item-> priceOf(item))
                   .sum();
+    }
+
+    private double priceOf(CartItem item) {
+        if(item.quantity() >=5.0){
+           return  catalog.getPriceOf(item.product()) * item.quantity() * 0.9;
+        }else
+        return  catalog.getPriceOf(item.product()) * item.quantity();
     }
 }

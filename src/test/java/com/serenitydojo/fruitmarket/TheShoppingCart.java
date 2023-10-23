@@ -3,13 +3,14 @@ package com.serenitydojo.fruitmarket;
 import com.serenitydojo.Cart;
 import com.serenitydojo.Catalog;
 import io.cucumber.java.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 
 public class TheShoppingCart {
     Catalog catalog = new Catalog();
-    @Before
+    @BeforeEach
     public void setUpCatalog(){
         catalog.setPrice("Apples", 5.0);
         catalog.setPrice("Bananas", 3.0);
@@ -46,6 +47,30 @@ public class TheShoppingCart {
         assertThat(runningTotal).isEqualTo(25.0);
     }
 
-    //You can remove items from your shopping cart, which should keep a running total.
-    //You can reset your shopping cart, which should reset the running total to zero.
+    // When you buy 5 kilos or more of any fruit, you get a 10% discount
+
+    @Test
+    public void shouldApplyDiscountWhenBuying5KilosOrMore(){
+        Cart cart = new Cart(catalog);
+        cart.addToCart("Apples", 5.0);
+
+        double runningTotal = cart.getRunningTotal();
+        assertThat(runningTotal).isEqualTo(22.50);
+
+    }
+
+
+    @Test
+    public void shouldApplyDiscountWhenBuying5KilosOrMoreWithDifferentProducts(){
+        Cart cart = new Cart(catalog);
+        cart.addToCart("Apples", 5.0);
+        cart.addToCart("Bananas", 1.0);
+        cart.addToCart("Oranges", 10.0);
+
+
+        double runningTotal = cart.getRunningTotal();
+        assertThat(runningTotal).isEqualTo(61.50);
+
+    }
+
 }
