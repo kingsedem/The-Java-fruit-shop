@@ -26,9 +26,9 @@ public class TheCatalog {
 
 
             assertThat(priceOfApples).isEqualTo(4.00);
-            assertThat(priceOfApples).isEqualTo(4.00);
-            assertThat(priceOfApples).isEqualTo(4.00);
-            assertThat(priceOfApples).isEqualTo(4.00);
+            assertThat(priceOfOranges).isEqualTo(4.00);
+            assertThat(priceOfBananas).isEqualTo(4.00);
+            assertThat(priceOfPears).isEqualTo(4.00);
 
         }
 
