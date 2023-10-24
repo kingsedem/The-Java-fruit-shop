@@ -10,7 +10,7 @@ For example the prices per kilo for the currently available fruits are:
     - Oranges: $5.50
     - Bananas: $6.00
     - Pears:   $4.50
-- Update the catalog with the current market price of a fruit
+- Update the catalog with the current market price of a fruit.
 - The Catalog should list the names of the currently available fruits in alphabetical order
 - The Catalog should throw a FruitUnavailableException if the fruit is not currently available
 - You can add items to your shopping cart, which should keep a running total.
