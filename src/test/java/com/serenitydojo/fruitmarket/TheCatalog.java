@@ -15,8 +15,21 @@ public class TheCatalog {
         public void shouldBeAbleToUpdateTheCurrentPriceOfAFruit() {
             Catalog catalog = new Catalog();
             catalog.setPrice("Apples", 4.00);
+            catalog.setPrice("Oranges", 5.50);
+            catalog.setPrice("Bananas", 6.00);
+            catalog.setPrice("Pears", 4.50);
+
             double priceOfApples = catalog.getPriceOf("Apples");
+            double priceOfOranges = catalog.getPriceOf("Oranges");
+            double priceOfBananas = catalog.getPriceOf("Bananas");
+            double priceOfPears = catalog.getPriceOf("Apples");
+
+
             assertThat(priceOfApples).isEqualTo(4.00);
+            assertThat(priceOfApples).isEqualTo(4.00);
+            assertThat(priceOfApples).isEqualTo(4.00);
+            assertThat(priceOfApples).isEqualTo(4.00);
+
         }
 
         @Test
