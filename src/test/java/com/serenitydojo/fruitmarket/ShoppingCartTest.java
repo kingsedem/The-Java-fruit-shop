@@ -2,7 +2,6 @@ package com.serenitydojo.fruitmarket;
 
 import com.serenitydojo.Cart;
 import com.serenitydojo.Catalog;
-import io.cucumber.java.ja.但し;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
