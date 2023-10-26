@@ -1,25 +1,17 @@
-# Serenity JUnit Starter project
+## Fruit Shop Cart Calculator Kata
 
-Get started quickly with Serenity BDD and JUnit 5 with this simple starter project. 
+In this kata, the challenge is to write a Fruit Shop Cart Calculator. 
+Write tests code to illustrate the following requirements, 
+and write the additional application code I need to make them work:
 
-## Get the code
-
-Click on the [Use This Template button](https://github.com/serenity-bdd/serenity-junit-starter/generate) to create a new project in your own Github account. 
-
-Or simply [download a zip](https://github.com/serenity-bdd/serenity-junit-starter/archive/master.zip) file.
-
-## Running the tests under Maven
-
-The template project comes with both Maven and Gradle build scripts. To run the tests with Maven, open a command window and run:
-
-  ./mvnw clean verify
-
-## Use Gradle
-
-For GRADLE, pen a command window and run:
-
-  ./gradlew test 
-
-## Viewing the reports
-
-Both of the commands provided above will produce a Serenity test report in the `target/site/serenity` directory. Go take a look!
+- The shop sells apples, oranges, bananas, pears, peaches and other fruit, depending on availability. 
+For example the prices per kilo for the currently available fruits are:
+    - Apples:  $4.00
+    - Oranges: $5.50
+    - Bananas: $6.00
+    - Pears:   $4.50
+- Update the catalog with the current market price of a fruit.
+- The Catalog should list the names of the currently available fruits in alphabetical order
+- The Catalog should throw a FruitUnavailableException if the fruit is not currently available
+- You can add items to your shopping cart, which should keep a running total.
+- When you buy 5 kilos or more of any fruit, you get a 10% discount.
